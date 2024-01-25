@@ -1,0 +1,12 @@
+syntax = "proto3";
+package chaintools.tools;
+
+import "gogoproto/gogo.proto";
+import "chaintools/tools/params.proto";
+
+option go_package = "chainTools/x/tools/types";
+
+// GenesisState defines the tools module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
